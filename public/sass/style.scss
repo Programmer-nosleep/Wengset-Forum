@@ -1,0 +1,21 @@
+@use './config/config';
+@use './form_login';
+@use './navbar';
+@use './content_home';
+@use './content_about';
+@use './content_service';
+@use './page_download';
+@use './footer';
+@use './config/media-query';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--darktheme-color);
+}
+

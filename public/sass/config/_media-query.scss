@@ -1,0 +1,266 @@
+@media screen and (max-width: 1100px) {
+    section {
+        .heading-page {
+            .container-heading-page {
+                margin: 5.8rem 1rem;
+                padding: 5.8rem 3.8rem;
+                padding-right: 88vh;
+            }
+        }
+    }
+
+    section {
+        .about-page {
+            .container-about-page {
+                justify-content: center;
+
+                .layout-about-content {
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+                    text-align: center;
+                    h2 {
+                        font: {
+                            size: 2.2rem;
+                        };
+                    }
+                    p {
+                        font: {
+                            size: 1.1rem
+                        };
+                    }
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    section {
+        .service-page {
+            .container-service-page {
+                .layout-service-content {
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+                    text-align: center;
+
+                    h2 {
+                        font: {
+                            size: 2.2rem;
+                        };
+                    }
+                    p {
+                        font: {
+                            size: 1.1rem;
+                        };
+                    }
+                }
+                
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    nav {
+        .container-navbar {
+            margin: .8rem 2.5rem;
+            align-items: center;
+
+            .logo {
+                margin-right: 0;
+            }
+        }
+
+        .btn-sign_in {
+            display: none;
+        }
+    }
+
+    section {
+        .heading-page {
+            .container-heading-page {
+                margin: 5.8rem 1rem;
+                padding: 5.8rem 3.8rem;
+                padding-right: 58vh;
+            }
+
+            .layout-flex-between {
+                .container-box-page {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    section {
+        .container-wrapper {
+            .wrapper-design {
+                min-width: 50%;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 860px) {
+    nav {
+        ul {
+            li {               
+                display: none;
+            }
+        }
+    }
+
+    section {
+        .heading-page {
+            .container-heading-page {
+                margin: 5.8rem 1rem;
+                padding: 5.8rem 3.8rem;
+            }
+
+            .layout-flex-between {
+                .container-box-page {
+                    width: 93%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        .container-navbar {
+            margin: .8rem 2rem;
+            align-items: center;
+
+            .logo {
+                margin-right: 0;
+            }
+        }
+    }
+
+    section {
+        .heading-page {
+            .container-heading-page {
+                margin: 5.8rem 1rem;
+                padding: 5.8rem 0;
+                align-items: center;
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            .layout-flex-between {
+                
+                .container-box-page {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    section {
+        .about-page {
+            .container-about-page {
+                justify-content: center;
+
+                .layout-about-content {
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+                    text-align: center;
+                    h2 {
+                        font: {
+                            size: 2.2rem;
+                        };
+                    }
+                    p {
+                        font: {
+                            size: 1.1rem
+                        };
+                    }
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    section {
+        .service-page {
+            .container-service-page {
+                .layout-service-content {
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+                    text-align: center;
+
+                    h2 {
+                        font: {
+                            size: 2.2rem;
+                        };
+                    }
+                    p {
+                        font: {
+                            size: 1.1rem;
+                        };
+                    }
+                }
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    section {
+        .download-page {
+            .container-download-page {
+                .layout-download-page {
+                    h2 {
+                        font: {
+                            size: 2.2rem;
+                        };
+                    }
+
+                    ul {
+                        li {
+                            width: 140px;
+                            height: 140px;
+                            margin-right: .5rem;
+                            margin-left: .5rem;
+
+                            a {
+                                font: {
+                                    size: 4.8rem;
+                                };
+                            }
+                        }
+                    }
+
+                    .layout-button-download {
+
+                        #button {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        .container-wrapper {
+            .wrapper-design {
+                min-width: 80%;
+            }
+        }
+
+    }
+}

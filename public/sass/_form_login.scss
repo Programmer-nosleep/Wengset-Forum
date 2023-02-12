@@ -1,0 +1,126 @@
+section {
+    transition: .3s ease;
+    .container-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .wrapper-design {
+            margin: 8rem 0;
+            min-width: 30%;
+            padding: 0 20px;
+            background: var(--default-color);
+            box-shadow: 0 26px 50px var(--default-color-sys-opt);
+            border-radius: 18px;
+
+            .wrapper-in {
+                padding: 28px;
+
+                .wrapper-header {
+                    h1 {
+                    color: var(--default-color-sys);
+                    font-size: 1.8rem;
+                    font-family: "Poppins" , sans-serif;
+                    font-weight: 600;
+                    }
+                }
+
+                .form-wrapper {
+                    display: flex;
+                    margin: 6px 0;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    #text-label {
+                        margin: 8px 0;
+                        font-size: .9rem;
+                        font-family: "Open Sans", sans-serif;
+                        font-weight: 600;
+                    }
+                    
+                    input[type=text] {
+                        border: 2px solid var(--default-color-sys);
+                        padding: 10px;
+                        border-radius: 5px;
+                        font-size: .9rem;
+                        font-family: "Open Sans", sans-serif;
+                        font-weight: 600;
+                    }
+                    
+                    input[type=password] {
+                        border: 2px solid var(--default-color-sys);
+                        padding: 10px;
+                        border-radius: 5px;
+                        font-size: .9rem;
+                        font-family: "Open Sans", sans-serif;
+                        font-weight: 600;
+                    }
+
+                    .btn-login-design {
+                        margin: 10px 0;
+                        
+                        button {
+                            border: none;
+                            cursor: pointer;
+                            border: 1.5px solid var(--default-color-sys);
+                            background: var(--default-color);
+                            padding: 10px 18px;
+                            border-radius: 6px;
+                            transition: .3s ease;
+                            font: {
+                                size: .9rem;
+                                family: "Open Sans";
+                                weight: 600;
+                            };
+
+                            .btn-text {
+                                margin: 10px 0;
+                                &:hover {
+                                    color: var(--default-color);
+                                }
+                            }
+
+                            &:hover {
+                                border: none;
+                                padding: 10.5px 18.5px;
+                                color: var(--default-color);
+                                background: linear-gradient(-48deg, #8e85f9 10%, #2460bf 50%, #4729c0 85%);
+                            }
+                        }                       
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    margin: 0 2rem;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    text-align: center;
+                
+                    li {
+                        list-style: none;
+                
+                        a {
+                            color: var(--default-color-sys);
+                            font-size: 0.85rem;
+                            font-family: "Open Sans", sans-serif;
+                            font-weight: 600;
+                            text-decoration: none;
+                            transition: .3s;
+                
+                            &:hover {
+                                color: var(--lightheme-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
