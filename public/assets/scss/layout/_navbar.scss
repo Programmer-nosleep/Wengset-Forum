@@ -1,0 +1,142 @@
+@use "../config/tokens" as t;
+
+@mixin button-prefix {
+  cursor: pointer;
+  background: var(--default-color);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: 0.5s ease;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: var(--nav-height);
+    background: var(--default-color);
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  .container-navbar {
+    display: flex;
+    height: var(--nav-height);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 t.$container-pad;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .logo {
+    color: var(--default-color);
+    cursor: pointer;
+    font-family: t.$font-poppins;
+    font-size: 1.2rem;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  ul.list-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+      padding: 0 1.4em;
+      list-style: none;
+
+      a {
+        color: var(--default-color);
+        font-family: t.$font-open-sans;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+
+        &:hover {
+          color: var(--text-href-linked);
+        }
+      }
+    }
+  }
+
+  .btn-sign_in {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+
+    .btn-nav {
+      @include button-prefix();
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease;
+      font-family: t.$font-open-sans;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--default-color-sys);
+
+      &:hover {
+        color: var(--default-color);
+        background: linear-gradient(-48deg, var(--gradient-a) 10%, var(--gradient-b) 50%, var(--gradient-c) 85%);
+        box-shadow: 0 8px 20px var(--default-color-sys-opt);
+      }
+    }
+  }
+}
+
+nav.active-navbar {
+  background: linear-gradient(48deg, var(--gradient-a) 0%, var(--gradient-b2) 50%, var(--gradient-c) 100%);
+  box-shadow: 0 10px 26px var(--default-color-sys-opt);
+
+  &::before {
+    display: none;
+  }
+
+  .logo {
+    color: #fff;
+  }
+
+  ul.list-menu li a {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  nav {
+    .container-navbar {
+      padding: 0 t.$container-pad-md;
+    }
+
+    .btn-sign_in {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  nav ul.list-menu li {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav .container-navbar {
+    padding: 0 t.$container-pad-sm;
+  }
+}

@@ -1,0 +1,39 @@
+@use "./tokens" as t;
+@use "../lib/color" as colorlib;
+
+@mixin declare-color($name, $value) {
+  --#{$name}: #{$value};
+  --#{$name}-hex: #{$value};
+  --#{$name}-rgb: #{colorlib.rgb-channels($value)};
+  --#{$name}-hsl: #{colorlib.hsl-channels($value)};
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Roboto:ital,wght@0,100;0,500;0,700;0,900;1,400&family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap");
+
+:root {
+  @include declare-color("default-color", t.$default-color);
+  @include declare-color("default-color-sys", t.$default-color-sys);
+  @include declare-color("default-color-sys-opt", t.$default-color-sys-opt);
+
+  --saturation: #{t.$saturation};
+  --brightness: #{t.$brightness};
+  --lightness: #{t.$lightness};
+  --brightness-dark: #{t.$brightness-dark};
+
+  --darktheme-color: hsl(#{t.$theme-hue}, var(--saturation), var(--brightness-dark));
+  --darktheme-color-hsl: #{t.$theme-hue} var(--saturation) var(--brightness-dark);
+
+  --lightheme-color: hsl(#{t.$theme-hue}, var(--saturation), var(--brightness));
+  --lightheme-color-hsl: #{t.$theme-hue} var(--saturation) var(--brightness);
+
+  --text-href-linked: hsl(#{t.$link-hue}, var(--saturation), var(--lightness));
+  --text-href-linked-hsl: #{t.$link-hue} var(--saturation) var(--lightness);
+
+  --margin-top: #{t.$margin-top};
+  --nav-height: #{t.$nav-height};
+
+  @include declare-color("gradient-a", t.$gradient-a);
+  @include declare-color("gradient-b", t.$gradient-b);
+  @include declare-color("gradient-b2", t.$gradient-b2);
+  @include declare-color("gradient-c", t.$gradient-c);
+}

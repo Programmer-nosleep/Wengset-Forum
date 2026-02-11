@@ -1,0 +1,116 @@
+@use "../config/tokens" as t;
+
+footer {
+  .footer {
+    width: 100%;
+    background: var(--darktheme-color);
+    color: var(--default-color);
+  }
+
+  .container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem t.$container-pad 1.5rem;
+  }
+
+  .layout-footer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+
+    ul {
+      h2 {
+        color: var(--default-color);
+        font-family: t.$font-poppins;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      li {
+        list-style: none;
+        margin: 10px 0;
+
+        a {
+          color: var(--default-color);
+          font-family: t.$font-open-sans;
+          font-size: 0.9rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: 0.3s ease;
+
+          &:hover {
+            color: var(--text-href-linked);
+          }
+        }
+      }
+    }
+
+    .quick-about {
+      max-width: 420px;
+      color: var(--default-color);
+      font-family: t.$font-open-sans;
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.6;
+
+      .logo {
+        margin-bottom: 10px;
+        font-family: t.$font-poppins;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .footer-end-copyright {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 2.6rem;
+    margin-top: 2.5rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--default-color);
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .logo-copyright {
+      cursor: pointer;
+      color: var(--default-color);
+      font-family: t.$font-open-sans;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+
+      h3 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  footer .container-footer {
+    padding-left: t.$container-pad-md;
+    padding-right: t.$container-pad-md;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer .container-footer {
+    padding-left: t.$container-pad-sm;
+    padding-right: t.$container-pad-sm;
+  }
+}

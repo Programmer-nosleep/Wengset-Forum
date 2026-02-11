@@ -1,0 +1,43 @@
+@use "../config/tokens" as t;
+
+.forum-page {
+  min-height: 70vh;
+  padding-top: calc(var(--nav-height) + 4.5rem);
+  padding-bottom: 6rem;
+  color: var(--default-color);
+}
+
+.container-forum-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 t.$container-pad;
+}
+
+.container-forum-page h2 {
+  font-family: t.$font-poppins;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.container-forum-page p {
+  margin-top: 0.6rem;
+  font-family: t.$font-roboto;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: rgba(250, 250, 250, 0.9);
+}
+
+@media screen and (max-width: 1060px) {
+  .container-forum-page {
+    padding-left: t.$container-pad-md;
+    padding-right: t.$container-pad-md;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-forum-page {
+    padding-left: t.$container-pad-sm;
+    padding-right: t.$container-pad-sm;
+  }
+}

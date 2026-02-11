@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:css": "sass public/assets/scss/main.scss public/assets/css/main.css --no-source-map",
+    "watch:css": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css --no-source-map"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^8.0.3",
+    "hbs": "^4.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sass": "^1.85.1"
   }
 }

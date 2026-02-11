@@ -1,0 +1,88 @@
+@use "../config/tokens" as t;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 t.$container-pad;
+}
+
+.card {
+  background: var(--default-color);
+  color: var(--default-color-sys);
+  border-radius: 18px;
+  box-shadow: 0 26px 50px var(--default-color-sys-opt);
+}
+
+.error-card {
+  margin: calc(var(--nav-height) + 3rem) 0 4rem;
+  padding: 18px;
+}
+
+.page-title {
+  font-family: t.$font-poppins;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.page-subtitle {
+  margin-top: 8px;
+  font-family: t.$font-roboto;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-family: t.$font-open-sans;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  color: var(--default-color);
+  background: linear-gradient(-48deg, var(--gradient-a) 10%, var(--gradient-b) 50%, var(--gradient-c) 85%);
+  box-shadow: 0 8px 20px var(--default-color-sys-opt);
+}
+
+.btn-ghost {
+  color: var(--default-color-sys);
+  background: transparent;
+  border: 1px solid var(--default-color-sys);
+}
+
+.btn-ghost:hover {
+  color: var(--default-color);
+  border-color: transparent;
+  background: linear-gradient(-48deg, var(--gradient-a) 10%, var(--gradient-b) 50%, var(--gradient-c) 85%);
+  box-shadow: 0 8px 20px var(--default-color-sys-opt);
+}
+
+@media screen and (max-width: 1060px) {
+  .container {
+    padding-left: t.$container-pad-md;
+    padding-right: t.$container-pad-md;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-left: t.$container-pad-sm;
+    padding-right: t.$container-pad-sm;
+  }
+}

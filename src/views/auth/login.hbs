@@ -1,0 +1,40 @@
+<section id="body">
+  <section>
+    <div class="container-wrapper">
+      <div class="wrapper-design">
+        <div class="wrapper-in">
+          <div class="wrapper-header">
+            <h1>Sign In</h1>
+          </div>
+
+          {{#if errors}}
+            <div class="form-errors">
+              <ul>
+                {{#each errors}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          {{/if}}
+
+          <form class="form-wrapper" method="post" action="/auth/login">
+            <label for="user" id="text-label">Username</label>
+            <input type="text" name="username" value="{{values.username}}" autocomplete="username" />
+
+            <label for="pass" id="text-label">Password</label>
+            <input type="password" name="password" autocomplete="current-password" />
+
+            <div class="btn-login-design">
+              <button class="btn-text" type="submit">Sign In</button>
+            </div>
+          </form>
+
+          <ul id="container-list">
+            <li><a href="#">Forgot Password</a></li>
+            <li><a href="/auth/signup">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

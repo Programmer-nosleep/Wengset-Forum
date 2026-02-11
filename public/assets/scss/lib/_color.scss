@@ -1,0 +1,14 @@
+@use "sass:color";
+@use "sass:math";
+
+@function rgb-channels($value) {
+  @return #{color.channel($value, "red", $space: rgb)} #{color.channel($value, "green", $space: rgb)}
+    #{color.channel($value, "blue", $space: rgb)};
+}
+
+@function hsl-channels($value) {
+  $hue: math.round(math.div(color.channel($value, "hue", $space: hsl), 1deg));
+  $sat: math.round(color.channel($value, "saturation", $space: hsl));
+  $light: math.round(color.channel($value, "lightness", $space: hsl));
+  @return #{$hue} #{$sat} #{$light};
+}
